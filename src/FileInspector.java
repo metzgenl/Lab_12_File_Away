@@ -26,14 +26,13 @@ public class FileInspector {
                     line = inFile.nextLine();
                     System.out.println(line);
 
-                    lineCount++; // Count the number of lines
+                    lineCount = lineCount + 1; // Add one for every time through
 
-                    // Count the number of words by splitting the line by spaces
-                    String[] words = line.split("\\s+");
-                    wordCount += words.length;
+                    // Count the number of words
+                    wordCount = line.split("\\s+").length + wordCount; //every space equals a new word
 
                     // Count the number of characters in the line
-                    charCount += line.length();
+                    charCount = line.length() + charCount;
                 }
 
                 // Print the summary report
