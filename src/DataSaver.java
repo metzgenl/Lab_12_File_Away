@@ -40,9 +40,9 @@ public class DataSaver {
 
         fileName = SafeInput.getNonZeroLenString(scanner, "Enter the filename (with .csv extension)"); //Get file name to save to
 
-        //Write to file
+        //Write to file, code from video
         File workingDirectory = new File(System.getProperty("user.dir"));
-        Path file = Paths.get(workingDirectory.getPath(), "src", fileName);
+        Path file = Paths.get(workingDirectory.getPath(), "src", fileName); //Put in user file name here
         try
         {
             OutputStream out =
